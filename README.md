@@ -6,11 +6,16 @@ separate from application routers, APIs, and domain state.
 
 ## Install from GitHub Releases
 
-Release tarballs contain the compiled JavaScript, declarations, and CSS:
+This repository is private, so download the release asset with an authenticated
+GitHub CLI, then install the local tarball:
 
 ```bash
-npm install https://github.com/SurpassHR/studio-ui/releases/download/v0.1.0/xmsthc-studio-ui-0.1.0.tgz
+gh release download v0.1.0 -R SurpassHR/studio-ui -p '*.tgz' -D /tmp
+npm install /tmp/xmsthc-studio-ui-0.1.0.tgz
 ```
+
+If the repository is later made public, the release asset can be installed
+directly from its GitHub URL.
 
 For local development from a checkout:
 
