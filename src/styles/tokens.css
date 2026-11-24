@@ -1,0 +1,189 @@
+:root,
+:root[data-studio-theme='dark'] {
+  color-scheme: dark;
+
+  --studio-bg: #0c0d0f;
+  --studio-surface: #131417;
+  --studio-surface-raised: #1a1b1f;
+  --studio-surface-hover: #202126;
+  --studio-line: rgba(255, 255, 255, 0.08);
+  --studio-line-strong: rgba(255, 255, 255, 0.16);
+
+  --studio-text: #f5f5f2;
+  --studio-text-secondary: #c6c6c0;
+  --studio-muted: #929399;
+  --studio-faint: #83848a;
+  --studio-faint-2: #5f6066;
+  --studio-placeholder: #85868c;
+
+  --studio-accent: #42e8b4;
+  --studio-accent-ink: #09271e;
+  --studio-accent-soft: rgba(66, 232, 180, 0.12);
+  --studio-accent-hover: #6cf0c4;
+  --studio-crop: #f5b74b;
+  --studio-crop-soft: rgba(245, 183, 75, 0.12);
+  --studio-crop-ink: #1f1607;
+  --studio-on-crop: #1f1607;
+  --studio-danger: #ff7a7a;
+  --studio-danger-soft: rgba(255, 107, 107, 0.12);
+  --studio-ok: #42e8b4;
+  --studio-warning: #f5b74b;
+  --studio-focus-ring: rgba(66, 232, 180, 0.76);
+
+  --studio-primary-bg: #f5f5f2;
+  --studio-primary-ink: #111214;
+  --studio-primary-hover: #ffffff;
+  --studio-inverse-bg: #f5f5f2;
+  --studio-inverse-ink: #111214;
+  --studio-inverse-hover: #ffffff;
+
+  --studio-media-bg: #0e0f11;
+  --studio-media-bg-deep: #0a0b0d;
+  --studio-tile-bg: #0f1012;
+  --studio-panel-sunken: #111216;
+  --studio-panel-sunken-2: #0e0f11;
+  --studio-code-bg: #0d0e10;
+  --studio-code-text: #c0c2c7;
+  --studio-log-text: #9a9ca1;
+  --studio-hover-bg: #17181b;
+  --studio-track: rgba(255, 255, 255, 0.09);
+  --studio-scrollbar: rgba(255, 255, 255, 0.2);
+  --studio-selection-bg: rgba(66, 232, 180, 0.28);
+  --studio-selection-ink: #ffffff;
+  --studio-brand-fill: rgba(12, 13, 15, 0.55);
+  --studio-toast-bg: rgba(26, 27, 31, 0.96);
+  --studio-scrim: rgba(5, 6, 8, 0.76);
+  --studio-scrim-soft: rgba(4, 5, 7, 0.28);
+  --studio-dot-grid: rgba(255, 255, 255, 0.035);
+  --studio-canvas-grid: rgba(255, 255, 255, 0.025);
+  --studio-input-focus-bg: #1d1e22;
+  --studio-card-hover: #16171a;
+  --studio-cover-bg: #101114;
+  --studio-cover-empty: #5f6066;
+  --studio-meta-dot: #717278;
+  --studio-legend: #6d6e74;
+  --studio-media-overlay: rgba(10, 11, 13, 0.74);
+  --studio-media-overlay-soft: rgba(10, 11, 13, 0.42);
+  --studio-subtle-bg: rgba(255, 255, 255, 0.018);
+  --studio-subtle-bg-2: rgba(255, 255, 255, 0.025);
+  --studio-shadow-float: 0 18px 44px rgba(0, 0, 0, 0.38);
+  --studio-shadow-dialog: 0 28px 72px rgba(0, 0, 0, 0.5);
+
+  --studio-radius-sm: 6px;
+  --studio-radius-md: 10px;
+  --studio-radius-lg: 14px;
+  --studio-font-ui: 'Inter Variable', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --studio-font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace;
+
+  --studio-font-size-micro: 10px;
+  --studio-font-size-meta: 11px;
+  --studio-font-size-label: 11.5px;
+  --studio-font-size-control: 12px;
+  --studio-font-size-body: 13px;
+  --studio-font-size-panel-title: 12px;
+  --studio-font-size-title: 14px;
+  --studio-font-size-display: clamp(28px, 2.5vw, 36px);
+  --studio-line-height-body: 1.55;
+  --studio-line-height-tight: 1.3;
+
+  --studio-space-1: 4px;
+  --studio-space-2: 6px;
+  --studio-space-3: 8px;
+  --studio-space-4: 10px;
+  --studio-space-5: 12px;
+  --studio-space-6: 16px;
+  --studio-space-7: 20px;
+  --studio-space-8: 24px;
+  --studio-space-9: 32px;
+
+  --studio-control-height-md: 34px;
+  --studio-control-height-sm: 28px;
+  --studio-rail-width: 176px;
+  --studio-inspector-width: 344px;
+  --studio-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root[data-studio-theme='light'] {
+  color-scheme: light;
+
+  --studio-bg: #f2f2ee;
+  --studio-surface: #fbfbf8;
+  --studio-surface-raised: #efefea;
+  --studio-surface-hover: #e7e7e1;
+  --studio-line: rgba(24, 26, 28, 0.1);
+  --studio-line-strong: rgba(24, 26, 28, 0.18);
+
+  --studio-text: #1b1c1e;
+  --studio-text-secondary: #4d4f54;
+  --studio-muted: #686a70;
+  --studio-faint: #6f7177;
+  --studio-faint-2: #929499;
+  --studio-placeholder: #6f7177;
+
+  --studio-accent: #0b7f60;
+  --studio-accent-ink: #f7fffc;
+  --studio-accent-soft: rgba(11, 127, 96, 0.12);
+  --studio-accent-hover: #096b50;
+  --studio-crop: #8a5906;
+  --studio-crop-soft: rgba(154, 100, 8, 0.12);
+  --studio-crop-ink: #2a1d05;
+  --studio-on-crop: #fff8ea;
+  --studio-danger: #b72e34;
+  --studio-danger-soft: rgba(183, 46, 52, 0.1);
+  --studio-ok: #0b7f60;
+  --studio-warning: #8a5906;
+  --studio-focus-ring: rgba(11, 127, 96, 0.7);
+
+  --studio-primary-bg: #1b1c1e;
+  --studio-primary-ink: #f7f7f4;
+  --studio-primary-hover: #2a2b2e;
+  --studio-inverse-bg: #1b1c1e;
+  --studio-inverse-ink: #f7f7f4;
+  --studio-inverse-hover: #2a2b2e;
+
+  --studio-media-bg: #e8e8e3;
+  --studio-media-bg-deep: #deded8;
+  --studio-tile-bg: #e9e9e4;
+  --studio-panel-sunken: #f0f0eb;
+  --studio-panel-sunken-2: #e8e8e2;
+  --studio-code-bg: #f1f1ec;
+  --studio-code-text: #4b4d52;
+  --studio-log-text: #5d5f64;
+  --studio-hover-bg: #e9e9e4;
+  --studio-track: rgba(24, 26, 28, 0.1);
+  --studio-scrollbar: rgba(24, 26, 28, 0.24);
+  --studio-selection-bg: rgba(11, 127, 96, 0.22);
+  --studio-selection-ink: #17221c;
+  --studio-brand-fill: rgba(24, 26, 28, 0.08);
+  --studio-toast-bg: rgba(251, 251, 248, 0.96);
+  --studio-scrim: rgba(24, 26, 28, 0.38);
+  --studio-scrim-soft: rgba(24, 26, 28, 0.18);
+  --studio-dot-grid: rgba(24, 26, 28, 0.05);
+  --studio-canvas-grid: rgba(24, 26, 28, 0.055);
+  --studio-input-focus-bg: #ffffff;
+  --studio-card-hover: #f5f5f0;
+  --studio-cover-bg: #e6e6e0;
+  --studio-cover-empty: #85878c;
+  --studio-meta-dot: #a2a4a8;
+  --studio-legend: #7f8187;
+  --studio-media-overlay: rgba(250, 250, 247, 0.9);
+  --studio-media-overlay-soft: rgba(250, 250, 247, 0.62);
+  --studio-subtle-bg: rgba(24, 26, 28, 0.025);
+  --studio-subtle-bg-2: rgba(24, 26, 28, 0.04);
+  --studio-shadow-float: 0 18px 44px rgba(20, 22, 24, 0.16);
+  --studio-shadow-dialog: 0 28px 72px rgba(20, 22, 24, 0.22);
+}
+
+:root[data-studio-density='compact'] {
+  --studio-font-size-body: 12.5px;
+  --studio-font-size-control: 11.5px;
+  --studio-control-height-md: 30px;
+  --studio-control-height-sm: 26px;
+  --studio-line-height-body: 1.45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --studio-ease: linear;
+  }
+}

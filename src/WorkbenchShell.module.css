@@ -1,0 +1,156 @@
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  overflow: hidden;
+  background: var(--studio-bg);
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 50px;
+  min-width: 0;
+  padding: 0 9px 0 12px;
+  border: 1px solid var(--studio-line);
+  border-radius: var(--studio-radius-md);
+  background: var(--studio-surface);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  flex: none;
+  height: 32px;
+  padding: 0 4px;
+  border: 0;
+  background: transparent;
+  color: var(--studio-text);
+  cursor: pointer;
+}
+
+.brandMark { position: relative; width: 22px; height: 22px; }
+.brandMark span { position: absolute; display: block; border: 1px solid var(--studio-accent); border-radius: 2px; }
+.brandMark span:first-child { inset: 3px; }
+.brandMark span:last-child { inset: 8px 2px 2px 8px; border-color: var(--studio-text); background: var(--studio-brand-fill); }
+.brandName { font-size: var(--studio-font-size-body); font-weight: 650; letter-spacing: -0.01em; }
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-left: 11px;
+  border-left: 1px solid var(--studio-line);
+  color: var(--studio-muted);
+  font-size: var(--studio-font-size-meta);
+}
+.breadcrumbs strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.headerActions { display: flex; align-items: center; gap: 5px; flex: 0 0 auto; margin-left: auto; min-width: 0; }
+
+.commandTrigger {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex: 0 0 200px;
+  width: 200px;
+  height: 31px;
+  padding: 0 9px;
+  border: 1px solid var(--studio-line);
+  border-radius: var(--studio-radius-sm);
+  background: var(--studio-surface-raised);
+  color: var(--studio-muted);
+  font-size: var(--studio-font-size-meta);
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: border-color 0.15s, background 0.15s;
+}
+.commandTrigger:hover { border-color: var(--studio-line-strong); background: var(--studio-surface-hover); }
+.commandTrigger kbd { margin-left: auto; color: var(--studio-faint); font-family: var(--studio-font-mono); font-size: var(--studio-font-size-micro); }
+.commandTrigger span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.status { display: inline-flex; align-items: center; gap: 5px; height: 28px; padding: 0 9px; border: 1px solid var(--studio-line); border-radius: 99px; color: var(--studio-muted); font-size: var(--studio-font-size-micro); white-space: nowrap; }
+
+.workspace { display: grid; grid-template-columns: var(--studio-rail-width) minmax(0, 1fr); gap: 8px; flex: 1; min-height: 0; }
+.withInspector { grid-template-columns: var(--studio-rail-width) minmax(0, 1fr) var(--studio-inspector-width); }
+
+.rail { display: flex; flex-direction: column; gap: 10px; min-height: 0; padding: 10px 8px; border: 1px solid var(--studio-line); border-radius: var(--studio-radius-md); background: var(--studio-surface); }
+.railGroup { display: flex; flex-direction: column; gap: 3px; }
+.railButton { position: relative; display: flex; align-items: center; gap: 9px; min-height: 36px; padding: 0 10px; border: 1px solid transparent; border-radius: var(--studio-radius-sm); background: transparent; color: var(--studio-text-secondary); font-size: var(--studio-font-size-label); text-align: left; cursor: pointer; transition: background 0.14s, color 0.14s, border-color 0.14s; }
+.railButton:hover:not(:disabled) { background: var(--studio-surface-raised); color: var(--studio-text); }
+.railButton:disabled { opacity: 0.3; cursor: not-allowed; }
+.railActive { border-color: var(--studio-line); background: var(--studio-surface-raised); color: var(--studio-text); }
+.railActive::before { content: ''; position: absolute; left: -9px; top: 50%; width: 3px; height: 17px; border-radius: 2px; background: var(--studio-accent); transform: translateY(-50%); }
+.railAttention { color: var(--studio-crop); }
+.railIcon { display: grid; place-items: center; width: 20px; color: currentColor; }
+.railText { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.railBadge { display: grid; place-items: center; min-width: 19px; height: 18px; padding: 0 5px; border-radius: 99px; background: var(--studio-crop); color: var(--studio-on-crop); font-family: var(--studio-font-mono); font-size: var(--studio-font-size-micro); font-weight: 650; }
+.railDone { color: var(--studio-accent); }
+.railFooter { display: flex; justify-content: space-between; margin-top: auto; padding: 9px 9px 2px; color: var(--studio-faint); font-family: var(--studio-font-mono); font-size: var(--studio-font-size-micro); letter-spacing: 0.05em; }
+
+.main { display: flex; flex-direction: column; min-width: 0; min-height: 0; overflow: hidden; border: 1px solid var(--studio-line); border-radius: var(--studio-radius-md); background: var(--studio-surface); }
+.mainContent { flex: 1; min-height: 0; overflow: auto; }
+
+.inspector { display: none; flex-direction: column; min-width: 0; min-height: 0; overflow: hidden; border: 1px solid var(--studio-line); border-radius: var(--studio-radius-md); background: var(--studio-surface); }
+.inspectorOpen { display: flex; }
+.inspectorHeader { display: flex; align-items: center; gap: 8px; flex: none; min-height: 62px; padding: 10px 9px 10px 15px; border-bottom: 1px solid var(--studio-line); }
+.inspectorHeading { min-width: 0; flex: 1; }
+.inspectorEyebrow { display: block; margin-bottom: 4px; color: var(--studio-muted); font-family: var(--studio-font-mono); font-size: var(--studio-font-size-micro); letter-spacing: 0.09em; }
+.inspectorHeader h2 { margin: 0; overflow: hidden; color: var(--studio-text); font-size: var(--studio-font-size-title); font-weight: 610; text-overflow: ellipsis; white-space: nowrap; }
+.inspectorHeaderActions { display: flex; align-items: center; gap: 2px; }
+.inspectorBody { flex: 1; min-height: 0; overflow: auto; padding: 0 15px 16px; }
+.inspectorHandle { display: none; position: absolute; right: 0; top: 50%; align-items: center; gap: 3px; flex-direction: column; padding: 10px 5px; border: 1px solid var(--studio-line); border-right: 0; border-radius: 8px 0 0 8px; background: var(--studio-surface); color: var(--studio-muted); font-size: var(--studio-font-size-micro); writing-mode: vertical-rl; transform: translateY(-50%); cursor: pointer; }
+.inspectorScrim { display: none; }
+
+@media (max-width: 1100px) {
+  .commandTrigger { flex: 0 0 34px; width: 34px; min-width: 34px; padding: 0; justify-content: center; }
+  .commandTrigger span,
+  .commandTrigger kbd { display: none; }
+}
+
+@media (max-width: 1180px) {
+  .workspace,
+  .withInspector { grid-template-columns: 58px minmax(0, 1fr); }
+  .rail { align-items: center; padding: 8px 5px; }
+  .railText,
+  .railBadge,
+  .railFooter { display: none; }
+  .railButton { justify-content: center; width: 40px; padding: 0; }
+  .railActive::before { left: -6px; }
+  .inspector { position: fixed; z-index: 160; top: 66px; right: 8px; bottom: 8px; width: min(380px, calc(100vw - 24px)); box-shadow: var(--studio-shadow-float); transform: translateX(calc(100% + 16px)); transition: transform 0.24s var(--studio-ease); }
+  .inspectorOpen { transform: translateX(0); }
+  .inspectorScrim { display: block; position: fixed; inset: 58px 0 0; z-index: 155; border: 0; background: var(--studio-scrim-soft); }
+  .inspectorHandle { display: flex; }
+}
+
+@media (max-width: 760px) {
+  .app { gap: 6px; padding: 6px; }
+  .header { flex: 0 0 46px; gap: 7px; padding: 0 7px; }
+  .brandName,
+  .breadcrumbs,
+  .commandTrigger,
+  .status { display: none; }
+  .workspace,
+  .withInspector { display: flex; flex-direction: column-reverse; gap: 6px; }
+  .rail { flex: 0 0 50px; flex-direction: row; justify-content: space-between; gap: 2px; padding: 4px; overflow-x: auto; }
+  .railGroup { flex-direction: row; flex: 1; justify-content: space-around; gap: 0; }
+  .railButton { width: 40px; height: 40px; min-height: 40px; }
+  .railActive::before { left: 50%; top: auto; bottom: -3px; width: 17px; height: 2px; transform: translateX(-50%); }
+  .main { flex: 1; }
+  .inspector { top: 60px; left: 6px; right: 6px; bottom: 6px; width: auto; }
+  .inspectorScrim { inset: 54px 0 0; }
+  .inspectorHandle { display: none; }
+}
